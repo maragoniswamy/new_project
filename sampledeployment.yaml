@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-sample-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-sample-app
+  template:
+    metadata:
+      labels:
+        app: my-sample-app
+    spec:
+      containers:
+        - name: my-app-container
+          image: poccontainerregistry17.azurecr.io/nginx:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: acr-credentials      

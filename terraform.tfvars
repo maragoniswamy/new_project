@@ -1,0 +1,10 @@
+resource_group_name = "myresourcegroup"
+location            = "EastUS"
+cluster_name        = "Myakscluster"
+kubernetes_version  = "1.26.3"
+system_node_count   = 1
+aks_virtual_network_name = "aks-vnet"
+acr_virtual_network_name  = "acr-vnet"
+acr_registry_name  =  "poccontainerregistry17"
+aks_subnet   =  "aks-subnet"
+acr_subnet   =  "acr-subnet"
